@@ -71,6 +71,10 @@ post '/visit' do
 end
 
 get '/showusers' do
+	# db = git_db
+	#
+	#@results = db.execute 'SELECT * FROM Users
+	# ORDER BY id DESC'
 
 	erb :showusers
 end
