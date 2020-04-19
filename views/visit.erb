@@ -30,9 +30,13 @@
 
       <label for="exampleFormControlSelect1">Example select</label>
       <select name="barber" class="form-control input_color" id="exampleFormControlSelect1">
-        <option <%= @barber == 'Jessie Pincman' ? 'selected' : '' %> >Jessie Pincman</option>
+        <!-- <option <%= @barber == 'Jessie Pincman' ? 'selected' : '' %> >Jessie Pincman</option>
         <option <%= @barber == 'Walter White' ? 'selected' : '' %> >Walter White</option>
-        <option <%= @barber == 'Gus Fring' ? 'selected' : '' %> >Gus Fring</option>
+        <option <%= @barber == 'Gus Fring' ? 'selected' : '' %> >Gus Fring</option> -->
+
+        <% @barbers.each do |item| %>
+        <option <%= @barber == item['name'] ? 'selected' : '' %>><%= item['name'] %></option>
+        <% end %>
       </select><br>
 
       <div class="form-group">
